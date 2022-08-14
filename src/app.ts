@@ -1,22 +1,13 @@
 import './db'
 import express from 'express'
+import conifg from './config/app.config'
 import { ApolloServer } from 'apollo-server-express'
 import { PingResolver } from './graphql/resolvers/ping'
 import { buildSchema } from 'type-graphql'
-import cors from "cors"
 
 const app = express()
 
-//cors TODO maybe relocate to another folder and make env variable
-//const ORIGIN = 'http://localhost:3000'
-const ORIGIN = '*'
-
-const corsOpts: cors.CorsOptions = {
-    origin: ORIGIN
-};
-
-app.use(cors(corsOpts));
-
+conifg(app)
 
 export async function startServer() {
     const server = new ApolloServer({
