@@ -2,9 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import logger from 'morgan'
 
-//cors TODO maybe relocate to another folder and make env variable
-//const ORIGIN = 'http://localhost:3000'
-const ORIGIN = '*'
+const ORIGIN = process.env.ORIGIN || '*'
 
 export = (app: express.Application) => {
 

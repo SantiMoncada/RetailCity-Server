@@ -1,7 +1,8 @@
 import 'reflect-metadata'
 import { startServer } from './app'
 
-const PORT = 3000 // TODO move to env variables
+const PORT = process.env.PORT || 5005
+
 const main = async () => {
     const app = await startServer()
     app.listen(PORT)

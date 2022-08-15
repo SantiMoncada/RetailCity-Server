@@ -1,7 +1,7 @@
 import mongoose from './../index'
 import { CategoryModel, ICategory } from '../../models/Category.model';
 
-const categoriesFile: any[] = require('./data/categories.json') //TODO ask how to import array of json in typescritp
+const categoriesFile: any[] = require('./data/categories.json')
 
 
 const categories: ICategory[] = categoriesFile.map(category => {
