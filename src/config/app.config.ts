@@ -11,7 +11,7 @@ export = (app: express.Application) => {
         origin: ORIGIN
     }
     app.use(cors(corsOpts))
-    //app.use(logger('dev'))
+    app.use(logger('dev'))
 
     return app
 }

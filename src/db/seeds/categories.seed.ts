@@ -25,5 +25,8 @@ db.on('open', () => {
             console.log(res)
             mongoose.connection.close()
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+            console.log(err)
+            mongoose.connection.close()
+        })
 })

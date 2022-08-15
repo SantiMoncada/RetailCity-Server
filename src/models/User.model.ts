@@ -1,3 +1,4 @@
+//TODO this is a template
 import { Schema, model } from 'mongoose';
 
 // 1. Create an interface representing a document in MongoDB.
